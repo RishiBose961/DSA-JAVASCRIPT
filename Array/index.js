@@ -209,3 +209,38 @@ num5.push(vale);
 //! • The number of elements to remove (0 when you are adding elements)
 //! • The elements you want to add to the array
 
+let arr11 = [1, 2, 3, 4, 5];
+let arr12 = [6, 7, 8, 9, 10];
+
+arr11.splice(5, 0, ...arr12);
+//*console.log(arr11); // [ 1, 2, 6, 7, 8, 9, 10, 3, 4, 5 ]
+
+let arr13 = [1, 2, 3,100,200,300,400, 4, 5];
+arr13.splice(3, 4);
+//*console.log(arr13); // [ 1, 2, 3, 5 ]
+
+
+//reduce() method
+//The reduce() method executes a reducer function (that you provide) on each element of the array,
+
+function add(a, b) {
+  return a + b;
+}
+
+let arr14 = [1, 2, 3, 4, 5];
+let sum2 = arr14.reduce(add);
+//!console.log(sum2); // 15
+
+//multi dimensional array
+
+let arr15 = [[89, 77],[76, 82, 81],[91, 94, 89]];
+
+let sum3 = 0;
+
+for (let rows = 0; rows < arr15.length; rows++) {
+  for (let cols = 0; cols < arr15[rows].length; cols++) {
+    sum3 += arr15[rows][cols];
+  }
+}
+
+console.log(sum3);
